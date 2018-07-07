@@ -1,0 +1,12 @@
+<md-content class="home">
+    <a ng-href="#/pieces-of-code/{{pieceOfCode.id}}" ng-repeat="pieceOfCode in $ctrl.piecesOfCode" class="piece-of-code-link">
+        <piece-of-code piece-of-code="pieceOfCode"></piece-of-code>
+    </a>
+    <md-button class="see-more-button" ng-if="$ctrl.piecesOfCodeNumber > $ctrl.piecesOfCode.length" ng-click="$ctrl.getNextPiecesOfCode()">
+        <span>See more</span>
+        <md-icon>expand_more</md-icon>
+    </md-button>
+    <a class="add-piece-of-code md-button md-fab md-primary" ng-href="#/post">
+        <md-icon>add</md-icon>
+    </a>
+</md-content>

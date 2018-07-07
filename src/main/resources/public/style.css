@@ -1,0 +1,111 @@
+#app-container {
+  background-color: #C2CCD1; }
+
+md-content {
+  position: absolute;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  width: 100%;
+  min-height: 100%; }
+
+.see-more-button {
+  width: 100%;
+  margin: auto; }
+
+md-select-menu {
+  height: 300px; }
+
+.login md-card {
+  margin: auto;
+  min-width: 400px; }
+
+.login .md-button {
+  width: 100px;
+  margin: auto; }
+
+.login span.error {
+  color: #dd2c00; }
+
+.home .piece-of-code-link {
+  display: inline-block;
+  text-decoration: none;
+  width: 30%;
+  margin-left: 2.33%;
+  margin-bottom: 4%; }
+
+.home .add-piece-of-code {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 100;
+  color: white; }
+
+.home .CodeMirror {
+  height: 200px; }
+
+.header {
+  z-index: 1000;
+  width: 100%;
+  color: white;
+  background-color: #3f51b5;
+  position: fixed;
+  padding: 16px; }
+  .header h1 {
+    margin: 0;
+    font-size: 1.5em; }
+    .header h1 a {
+      color: white;
+      text-decoration: none; }
+  .header > div {
+    margin-left: auto; }
+    .header > div span {
+      margin: auto 8px auto auto; }
+    .header > div md-icon {
+      color: white;
+      cursor: pointer; }
+
+.post md-card {
+  margin: auto;
+  width: 80%; }
+
+.post .md-button {
+  width: 100px;
+  margin: auto; }
+
+.piece-of-code-general md-card-title {
+  padding-top: 0; }
+  .piece-of-code-general md-card-title md-card-title-text {
+    width: 100%; }
+
+.piece-of-code-general h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.piece-of-code-general .md-headline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.piece-of-code-general .language > span {
+  background-color: #00bb00;
+  color: white;
+  padding: 8px; }
+
+.piece-of-code md-card {
+  margin: auto;
+  width: 80%; }
+  .piece-of-code md-card .reactions {
+    margin-top: 0;
+    margin-bottom: 16px; }
+    .piece-of-code md-card .reactions .reaction-number {
+      margin: auto auto auto 8px; }
+  .piece-of-code md-card .comment-form md-input-container {
+    width: 100%; }
+  .piece-of-code md-card h4 {
+    white-space: normal !important;
+    text-overflow: unset !important; }
+
+/*# sourceMappingURL=style.css.map */

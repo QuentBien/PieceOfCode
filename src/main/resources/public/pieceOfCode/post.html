@@ -1,0 +1,24 @@
+<md-content layout="row" class="post">
+    <md-card layout="column">
+        <md-card-content>
+            <form name="$ctrl.postForm" layout="column" ng-submit="$ctrl.postForm.$valid && $ctrl.post()" novalidate>
+                <md-input-container md-is-error="$ctrl.postForm.$submitted && $ctrl.postForm.title.$invalid">
+                    <label for="title">Title</label>
+                    <input id="title" name="title" type="text" ng-model="$ctrl.pieceOfCode.title" required>
+                    <ng-messages for="$ctrl.postForm.email.$error">
+                        <ng-message when="required">This field is required</ng-message>
+                    </ng-messages>
+                </md-input-container>
+                <md-input-container>
+                    <label>Code Language</label>
+                    <md-select ng-model="$ctrl.pieceOfCode.codeLanguage" ng-change="$ctrl.refreshCodeMirror()">
+                        <md-option ng-value="codeLanguage" ng-repeat="codeLanguage in codeLanguages">{{codeLanguage}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <textarea ng-model="$ctrl.pieceOfCode.code"
+                          ui-codemirror ui-codemirror-opts="$ctrl.editorOptions" required></textarea>
+                <md-button class="md-raised md-primary" type="submit" ng-disabled="$ctrl.submitting">Post</md-button>
+            </form>
+        </md-card-content>
+    </md-card>
+</md-content>

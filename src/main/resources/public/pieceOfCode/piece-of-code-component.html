@@ -1,0 +1,16 @@
+<md-card layout="column" class="piece-of-code-general">
+    <div class="language" layout="row" layout-align="end start">
+        <span>{{$ctrl.pieceOfCode.codeLanguage}}</span>
+    </div>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">{{$ctrl.pieceOfCode.user.fullName}}</span>
+            <span class="md-subhead">{{$ctrl.pieceOfCode.publicationDate | date : 'medium'}}</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-divider></md-divider>
+    <md-card-content>
+        <h2>{{$ctrl.pieceOfCode.title}}</h2>
+        <ui-codemirror ui-codemirror-opts="$ctrl.editorOptions" ng-model="$ctrl.pieceOfCode.code"></ui-codemirror>
+    </md-card-content>
+</md-card>

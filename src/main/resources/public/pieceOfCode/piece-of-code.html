@@ -1,0 +1,68 @@
+<md-content layout="column" class="piece-of-code">
+    <piece-of-code piece-of-code="$ctrl.pieceOfCode"></piece-of-code>
+    <md-card layout="column">
+        <md-card-content>
+            <div class="reactions" layout="row" layout-align="space-around center">
+                <div layout="row">
+                    <md-button class="md-fab" ng-click="$ctrl.react('LOVE')"
+                               ng-disabled="$ctrl.pieceOfCode.userReaction.reactionEmote == 'LOVE'">
+                        ❤️
+                    </md-button>
+                    <span class="reaction-number">{{$ctrl.pieceOfCode.reactionsNumber['LOVE']}}</span>
+                </div>
+                <div layout="row">
+                    <md-button class="md-fab" ng-click="$ctrl.react('UP')"
+                               ng-disabled="$ctrl.pieceOfCode.userReaction.reactionEmote == 'UP'">
+                        <md-icon>exposure_plus_1</md-icon>
+                    </md-button>
+                    <span class="reaction-number">{{$ctrl.pieceOfCode.reactionsNumber['UP']}}</span>
+                </div>
+                <div layout="row">
+                    <md-button class="md-fab" ng-click="$ctrl.react('HAHA')"
+                               ng-disabled="$ctrl.pieceOfCode.userReaction.reactionEmote == 'HAHA'">
+                        😂
+                    </md-button>
+                    <span class="reaction-number">{{$ctrl.pieceOfCode.reactionsNumber['HAHA']}}</span>
+                </div>
+                <div layout="row">
+                    <md-button class="md-fab" ng-click="$ctrl.react('DOWN')"
+                               ng-disabled="$ctrl.pieceOfCode.userReaction.reactionEmote == 'DOWN'">
+                        <md-icon>exposure_neg_1</md-icon>
+                    </md-button>
+                    <span class="reaction-number">{{$ctrl.pieceOfCode.reactionsNumber['DOWN']}}</span>
+                </div>
+                <div layout="row">
+                    <md-button class="md-fab" ng-click="$ctrl.react('ANGRY')"
+                               ng-disabled="$ctrl.pieceOfCode.userReaction.reactionEmote == 'ANGRY'">
+                        😠
+                    </md-button>
+                    <span class="reaction-number">{{$ctrl.pieceOfCode.reactionsNumber['ANGRY']}}</span>
+                </div>
+            </div>
+            <md-divider></md-divider>
+            <md-list flex>
+                <md-subheader class="md-no-sticky">{{$ctrl.commentsNumber}} comment(s)</md-subheader>
+                <md-list-item class="md-3-line" ng-repeat="comment in $ctrl.comments">
+                    <div class="md-list-item-text" layout="column">
+                        <h3>{{comment.user.fullName}}</h3>
+                        <h4>{{comment.text}}</h4>
+                        <p>{{comment.publicationDate | date : 'medium'}}</p>
+                    </div>
+                </md-list-item>
+                <md-button class="see-more-button" ng-if="$ctrl.commentsNumber > $ctrl.comments.length" ng-click="$ctrl.getNextComments()">
+                    <span>See more</span>
+                    <md-icon>expand_more</md-icon>
+                </md-button>
+            </md-list>
+            <form class="comment-form" ng-submit="$ctrl.commentPost()" layout="row">
+                <md-input-container md-no-float class="md-block">
+                    <md-icon>message</md-icon>
+                    <input ng-model="$ctrl.comment" type="text" placeholder="Comment">
+                </md-input-container>
+                <md-button type="submit" class="md-fab md-primary" ng-disabled="$ctrl.submittingComment">
+                    <md-icon>send</md-icon>
+                </md-button>
+            </form>
+        </md-card-content>
+    </md-card>
+</md-content>

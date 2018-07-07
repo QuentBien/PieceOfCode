@@ -1,0 +1,26 @@
+.header {
+  z-index: 1000;
+  width: 100%;
+  color: white;
+  background-color: rgb(63,81,181);
+  position: fixed;
+  h1 {
+    margin: 0;
+    font-size: 1.5em;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  padding: 16px;
+  & > div {
+    margin-left: auto;
+    span {
+      margin: auto 8px auto auto;
+    }
+    md-icon {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}

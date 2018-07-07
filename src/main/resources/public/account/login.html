@@ -1,0 +1,72 @@
+<md-content layout="row" class="login">
+    <md-card layout="column">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Log in</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <form name="$ctrl.loginForm" layout="column" ng-submit="$ctrl.loginForm.$valid && $ctrl.login()" novalidate>
+                <md-input-container md-is-error="$ctrl.loginForm.$submitted && $ctrl.loginForm.email.$invalid">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" ng-model="$ctrl.credentials.email" required>
+                    <ng-messages for="$ctrl.loginForm.email.$error">
+                        <ng-message when="required">This field is required</ng-message>
+                        <ng-message when="email">This email is not valid</ng-message>
+                    </ng-messages>
+                </md-input-container>
+                <md-input-container md-is-error="$ctrl.loginForm.$submitted && $ctrl.loginForm.password.$invalid">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" ng-model="$ctrl.credentials.password" required>
+                    <ng-messages for="$ctrl.loginForm.password.$error">
+                        <ng-message when="required">This field is required</ng-message>
+                    </ng-messages>
+                </md-input-container>
+                <span class="error" ng-if="$ctrl.loginError">Incorrect email/password combination</span>
+                <md-button class="md-raised md-primary" type="submit" ng-disabled="$ctrl.submitting">Login</md-button>
+            </form>
+        </md-card-content>
+    </md-card>
+    <md-card layout="column">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Register</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <form name="$ctrl.registerForm" layout="column" ng-submit="$ctrl.registerForm.$valid && $ctrl.register()" novalidate>
+                <md-input-container md-is-error="$ctrl.registerForm.$submitted && $ctrl.registerForm.firstName.$invalid">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" name="firstName" type="text" ng-model="$ctrl.userToRegister.firstName" required>
+                    <ng-messages for="$ctrl.registerForm.firstName.$error">
+                        <ng-message when="required">This field is required</ng-message>
+                    </ng-messages>
+                </md-input-container>
+                <md-input-container md-is-error="$ctrl.registerForm.$submitted && $ctrl.registerForm.lastName.$invalid">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" name="lastName" type="text" ng-model="$ctrl.userToRegister.lastName" required>
+                    <ng-messages for="$ctrl.registerForm.lastName.$error">
+                        <ng-message when="required">This field is required</ng-message>
+                    </ng-messages>
+                </md-input-container>
+                <md-input-container md-is-error="$ctrl.registerForm.$submitted && $ctrl.registerForm.email.$invalid">
+                    <label for="user-email">Email</label>
+                    <input id="user-email" name="email" type="email" ng-model="$ctrl.userToRegister.email" required>
+                    <ng-messages for="$ctrl.registerForm.email.$error">
+                        <ng-message when="required">This field is required</ng-message>
+                        <ng-message when="email">This email is not valid</ng-message>
+                    </ng-messages>
+                </md-input-container>
+                <md-input-container md-is-error="$ctrl.registerForm.$submitted && $ctrl.registerForm.password.$invalid">
+                    <label for="user-password">Password</label>
+                    <input id="user-password" name="password" type="password" ng-model="$ctrl.userToRegister.password" required>
+                    <ng-messages for="$ctrl.registerForm.password.$error">
+                        <ng-message when="required">This field is required</ng-message>
+                    </ng-messages>
+                </md-input-container>
+                <span class="error" ng-if="$ctrl.registerError">There is already an account using this email address</span>
+                <md-button class="md-raised md-primary" type="submit" ng-disabled="$ctrl.submitting">Register</md-button>
+            </form>
+        </md-card-content>
+    </md-card>
+</md-content>

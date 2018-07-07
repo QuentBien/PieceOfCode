@@ -1,0 +1,43 @@
+angular.module('pieceOfCode').constant('CodeLanguages', [
+    'C',
+    'CPP',
+    'JAVA',
+    'CSHARP',
+    'OBJECTIVEC',
+    'SCALA',
+    'KOTLIN',
+    'SQUIRREL',
+    'CEYLON',
+    'JAVASCRIPT',
+    'TYPESCRIPT',
+    'SQL',
+    'XML',
+    'PHP',
+    'CSS',
+    'HTML',
+    'COBOL',
+    'RUBY',
+    'PASCAL'
+]).constant('ContentType', {
+    C: 'text/x-c',
+    CPP: 'text/x-c++src',
+    JAVA: 'text/x-java',
+    CSHARP: 'text/x-csharp',
+    OBJECTIVEC: 'text/x-objectivec',
+    SCALA: 'text/x-scala',
+    KOTLIN: 'text/x-kotlin',
+    SQUIRREL: 'text/x-squirrel',
+    CEYLON: 'text/x-ceylon',
+    JAVASCRIPT: 'text/javascript',
+    TYPESCRIPT: 'text/typescript',
+    SQL: 'text/x-sql',
+    XML: 'text/xml',
+    PHP: 'text/x-php',
+    CSS: 'text/css',
+    HTML: 'text/html',
+    COBOL: 'text/x-cobol',
+    RUBY: 'text/x-ruby',
+    PASCAL: 'text/x-pascal'
+}).run(function ($rootScope, CodeLanguages) {
+    $rootScope.codeLanguages = CodeLanguages;
+});

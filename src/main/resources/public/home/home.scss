@@ -1,0 +1,19 @@
+.home {
+  .piece-of-code-link {
+    display: inline-block;
+    text-decoration: none;
+    width: 30%;
+    margin-left: 2.33%;
+    margin-bottom: 4%;
+  }
+  .add-piece-of-code {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 100;
+    color: white;
+  }
+  .CodeMirror {
+    height: 200px;
+  }
+}

@@ -1,0 +1,48 @@
+.piece-of-code-general {
+  md-card-title {
+    padding-top: 0;
+    md-card-title-text {
+      width: 100%;
+    }
+  }
+  h2 {
+    margin: 0 0 16px 0;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .md-headline {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .language > span {
+    background-color: #00bb00;
+    color: white;
+    padding: 8px;
+  }
+}
+
+.piece-of-code {
+  md-card {
+    margin: auto;
+    width: 80%;
+    .reactions {
+      margin-top: 0;
+      margin-bottom: 16px;
+      .reaction-number {
+        margin: auto auto auto 8px;
+      }
+    }
+    .comment-form {
+      md-input-container {
+        width: 100%;
+      }
+    }
+    h4 {
+      white-space: normal !important;
+      text-overflow: unset !important;
+    }
+  }
+}

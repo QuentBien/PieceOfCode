@@ -1,0 +1,59 @@
+<!doctype html>
+<!--[if lte IE 9]>
+<html class="angular-not-supported"><![endif]-->
+<!--[if gt IE 9]>
+<html><![endif]-->
+<!--[if !IE]><!-->
+<html><!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <page-title><title>pieceOfCode</title></page-title>
+
+    <!-- injector:css -->
+    <link rel="stylesheet" href="build/libs.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- endinjector -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+</head>
+
+<body ng-app="pieceOfCode" ng-class="{'angular-supported': browserSupported}">
+<noscript>
+    <div id="noscript">
+        <p>pieceOfCode requires Javascript. Please enable it in your browser.</p>
+    </div>
+</noscript>
+
+<div id="app-container" layout="column" ng-cloak role="main" layout-fill>
+    <header ui-view="header"></header>
+    <main-container layout="column" center-header flex ui-view></main-container>
+</div>
+
+<!-- injector:js -->
+<script src="build/libs.js"></script>
+<script src="pieceOfCode.js"></script>
+<script src="account/login-controller.js"></script>
+<script src="account/user-service.js"></script>
+<script src="configuration/route-config.js"></script>
+<script src="header/header-controller.js"></script>
+<script src="home/home-controller.js"></script>
+<script src="pieceOfCode/code-languages.js"></script>
+<script src="pieceOfCode/piece-of-code-component.js"></script>
+<script src="pieceOfCode/piece-of-code-controller.js"></script>
+<script src="pieceOfCode/post-controller.js"></script>
+<!-- endinjector -->
+
+<script src="http://codemirror.net/mode/javascript/javascript.js"></script>
+<script src="http://codemirror.net/mode/xml/xml.js"></script>
+<script src="http://codemirror.net/mode/clike/clike.js"></script>
+<script src="http://codemirror.net/mode/sql/sql.js"></script>
+<script src="http://codemirror.net/mode/pascal/pascal.js"></script>
+<script src="http://codemirror.net/mode/cobol/cobol.js"></script>
+<script src="http://codemirror.net/mode/ruby/ruby.js"></script>
+<script src="http://codemirror.net/mode/python/python.js"></script>
+<script src="http://codemirror.net/mode/php/php.js"></script>
+<script src="http://codemirror.net/mode/css/css.js"></script>
+
+</body>
